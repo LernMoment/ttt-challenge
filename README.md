@@ -12,3 +12,4 @@ Egal ob du viel oder wenig Erfahrung in der Entwicklung von Software hast, diese
 
  - [Erik](https://github.com/supermew10/TicTacToe) - hatte schon vor dem Start der Challenge eine erste Lösung und möchte diese nun in den kommenden Tagen verbessern. Ich freue mich ihm Rückmeldung und Verbesserungsvorschläge geben zu können.
  - [Daniel](https://github.com/gustda/TTT-Challenge) - nimmt die Aufgabe als Basis, aber hat sich selber größere Ziele für die Challenge gesetzt. Ich freue mich mit ihm fachliche Diskussionen u.a. zum Thema Anforderungsmanagement führen zu können.
+ - [Heinrich](https://github.com/nocheinheinrich/tic-tac-toe) - startet gerade mit C# und hat dennoch eine erste lauffähige Lösung. Hoffe, dass wir gemeinsam noch ein wenig am Design arbeiten können.
