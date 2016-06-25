@@ -10,7 +10,12 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("WILLKOMMEN zur TicTacToe C# Challenge!!!");
+            Console.WriteLine("WILLKOMMEN zu LernMoment's TicTacToe!!!");
+
+            Spielbrett.Anzeigen();
+
+            Console.WriteLine("Zum beenden RETURN (bzw. Enter) drücken.");
+            Console.ReadLine();
         }
     }
 }
