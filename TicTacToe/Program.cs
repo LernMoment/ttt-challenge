@@ -13,6 +13,8 @@ namespace TicTacToe
             Console.WriteLine("WILLKOMMEN zu LernMoment's TicTacToe!!!");
 
             Spielbrett.Anzeigen();
+            Spielbrett.SpielsteinSetzen('X', 'A', 1);
+            Spielbrett.Anzeigen();
 
             Console.WriteLine("Zum beenden RETURN (bzw. Enter) drücken.");
             Console.ReadLine();
