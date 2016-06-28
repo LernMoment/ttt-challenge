@@ -4,11 +4,11 @@ namespace TicTacToe
 {
     class Spielbrett
     {
-        private static string[] spalteA = { " ", " ", " " };
-        private static string[] spalteB = { " ", " ", " " };
-        private static string[] spalteC = { " ", " ", " " };
+        private string[] spalteA = { " ", " ", " " };
+        private string[] spalteB = { " ", " ", " " };
+        private string[] spalteC = { " ", " ", " " };
 
-        public static void SpielsteinSetzen(char symbol, char spalte, int zeile)
+        public void SpielsteinSetzen(char symbol, char spalte, int zeile)
         {
             if (symbol != 'X' && symbol != 'O')
             {
@@ -37,7 +37,7 @@ namespace TicTacToe
             }
         }
 
-        public static void Anzeigen()
+        public void Anzeigen()
         {
             Console.WriteLine("  A   B   C ");
             Console.WriteLine($"0 {spalteA[0]} | {spalteB[0]} | {spalteC[0]} ");
