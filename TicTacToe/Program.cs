@@ -21,10 +21,9 @@ namespace TicTacToe
 
                 if (kommando.ToLower() == "neu")
                 {
-                    Spielbrett aktuellesSpiel = new Spielbrett();
-                    aktuellesSpiel.Anzeigen();
-                    aktuellesSpiel.SpielsteinSetzen('X', 'A', 1);
-                    aktuellesSpiel.Anzeigen();
+                    Spiel aktuellesSpiel = new Spiel();
+                    aktuellesSpiel.SpielzugAusfuehren('A', 1);
+                    aktuellesSpiel.SpielzugAusfuehren('B', 1);
                 }
             }
         }
