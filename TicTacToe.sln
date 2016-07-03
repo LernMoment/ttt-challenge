@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub-Doku", "GitHub-Doku", "{E6D70202-CE5F-4A2E-8101-C66F4334EE21}"
 	ProjectSection(SolutionItems) = preProject
+		Design.md = Design.md
 		Projektstart.md = Projektstart.md
 		README.md = README.md
 	EndProjectSection
