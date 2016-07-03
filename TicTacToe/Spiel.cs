@@ -36,6 +36,13 @@ namespace TicTacToe
             SpielerWechseln();
         }
 
+        public bool IstBeendet()
+        {
+            // TODO: Gewinner ermitteln
+            // TODO: Unentschieden ermitteln
+            return false;
+        }
+
         private void SpielerWechseln()
         {
             if (istSpieler1AmZug == true)
