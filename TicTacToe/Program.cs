@@ -14,12 +14,12 @@ namespace TicTacToe
             Console.WriteLine();
             string kommando = "unbekannt";
 
-            while (kommando.ToLower() != "ende")
+            while (!IstAbbruchKommando(kommando))
             {
                 Console.Write("Starte ein neues Spiel mit 'neu' und beende das Programm mit 'ende': ");
                 kommando = Console.ReadLine();
 
-                if (kommando.ToLower() == "neu")
+                if (IstNeustartKommando(kommando))
                 {
                     Spiel aktuellesSpiel = new Spiel();
 
