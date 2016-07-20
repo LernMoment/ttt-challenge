@@ -12,17 +12,13 @@ namespace TicTacToe
         {
             Console.WriteLine("WILLKOMMEN zu LernMoment's TicTacToe!!!");
 
-            // Erstes Spiel wird gestartet
-            Console.WriteLine();
-            Console.WriteLine("ERSTES Spiel:");
             Spiel aktuellesSpiel = new Spiel();
-            aktuellesSpiel.EinenSpielzugAusfuehren();
 
-            // Neues Spiel wird gestartet
-            Console.WriteLine();
-            Console.WriteLine("ZWEITES Spiel:");
-            aktuellesSpiel = new Spiel();
-            aktuellesSpiel.AnderenSpielzugAusfuehren();
+            Console.WriteLine("Spieler {0} macht folgenden Zug:", aktuellesSpiel.AktuellerSpieler.ToString());
+            aktuellesSpiel.SpielzugAusfuehren('A', 0);
+
+            Console.WriteLine("Spieler {0} macht folgenden Zug:", aktuellesSpiel.AktuellerSpieler.ToString());
+            aktuellesSpiel.SpielzugAusfuehren('B', 1);
 
             Console.WriteLine("Zum beenden RETURN (bzw. Enter) drücken.");
             Console.ReadLine();

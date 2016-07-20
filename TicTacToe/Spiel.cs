@@ -9,19 +9,38 @@ namespace TicTacToe
     class Spiel
     {
         private Spielbrett brett = new Spielbrett();
+        private bool istSpielerEinsAmZug = true;
 
-        public void EinenSpielzugAusfuehren()
+        public char AktuellerSpieler
         {
-            brett.Anzeigen();
-            brett.SpielsteinSetzen('X', 'C', 2);
-            brett.Anzeigen();
+            get
+            {
+                if (istSpielerEinsAmZug == true)
+                {
+                    return 'X';
+                }
+
+                return 'O';
+            }
         }
 
-        public void AnderenSpielzugAusfuehren()
+        public void SpielzugAusfuehren(char spalte, int zeile)
         {
+            brett.SpielsteinSetzen(AktuellerSpieler, spalte, zeile);
             brett.Anzeigen();
-            brett.SpielsteinSetzen('O', 'B', 1);
-            brett.Anzeigen();
+            SpielerWechseln();
+        }
+
+        private void SpielerWechseln()
+        {
+            if (istSpielerEinsAmZug == true)
+            {
+                istSpielerEinsAmZug = false;
+            }
+            else
+            {
+                istSpielerEinsAmZug = true;
+            }
         }
     }
 }
