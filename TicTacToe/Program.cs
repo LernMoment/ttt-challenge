@@ -12,16 +12,31 @@ namespace TicTacToe
         {
             Console.WriteLine("WILLKOMMEN zu LernMoment's TicTacToe!!!");
 
-            Spiel aktuellesSpiel = new Spiel();
+            if (IstSpielzug("B1"))
+            {
+                Console.WriteLine("ERFOLG: Der Algorithmus erkennt eine Koordinate als Spielzug.");
+            }
+            else
+            {
+                Console.WriteLine("FEHLER: Der Algorithmus erkennt eine Koordinate NICHT als Spielzug!");
+            }
 
-            Console.WriteLine("Spieler {0} macht folgenden Zug:", aktuellesSpiel.AktuellerSpieler.ToString());
-            aktuellesSpiel.SpielzugAusfuehren('A', 0);
-
-            Console.WriteLine("Spieler {0} macht folgenden Zug:", aktuellesSpiel.AktuellerSpieler.ToString());
-            aktuellesSpiel.SpielzugAusfuehren('B', 1);
+            if (IstSpielzug("ende"))
+            {
+                Console.WriteLine("FEHLER: Der Algorithmus sieht das ENDE-Kommando als Spielzug an.");
+            }
+            else
+            {
+                Console.WriteLine("ERFOLG: Der Algorithmus sieht das ENDE-Kommando NICHT als Spielzug an.");
+            }
 
             Console.WriteLine("Zum beenden RETURN (bzw. Enter) drücken.");
             Console.ReadLine();
+        }
+
+        static bool IstSpielzug(string kommando)
+        {
+            return false;
         }
     }
 }
