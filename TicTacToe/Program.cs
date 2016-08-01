@@ -48,18 +48,29 @@ namespace TicTacToe
             // 1) Prüfen ob das Kommando länger als 2 Zeichen ist.
             // Ein Spielzug besteht immer aus exakt 2 Zeichen. Wenn das Kommando mehr Zeichen
             // enthält, dann kann es kein Spielzug sein.
+            if (kommando.Length != 2)
+            {
+                return false;
+            }
 
             // 2) Prüfen ob das Kommando als erstes einen Buchstaben enthält.
             // Ist das Kommando ein Spielzug, dann ist das erste Zeichen ein Buchstaben und 
             // identifiziert die Spalte der Koordinate. Ist das erste Zeichen kein Buchstabe,
             // kann das Kommando NICHT ein Spielzug sein.
+            string spalte = kommando.Substring(0, 1);
+            if (!Char.IsLetter(char.Parse(spalte)))
+            {
+                return false;
+            }
 
             // 3) Prüfen ob das Kommando an zweiter Stelle eine Ziffer enthält.
             // Ist das Kommando ein Spielzug, dann ist das zweite Zeichen eine Ziffer und 
             // identifiziert die Zeile der Koordinate. Ist das zweite Zeichen keine Ziffer,
             // kann das Kommando NICHT ein Spielzug sein.
+            string zeile = kommando.Substring(1, 1);
+            int.Parse(zeile); // Wird eine Exception schmeißen, wenn zeile nicht eine Ziffer ist!
 
-            return false;
+            return true;
         }
     }
 }
