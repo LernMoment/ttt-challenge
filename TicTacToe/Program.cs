@@ -45,10 +45,7 @@ namespace TicTacToe
         /// false, wenn es sich um ein anderes (oder nicht unterstütztes) Kommando handelt.</returns>
         static bool IstSpielzug(string kommando)
         {
-            // 1) Prüfen ob das Kommando länger als 2 Zeichen ist.
-            // Ein Spielzug besteht immer aus exakt 2 Zeichen. Wenn das Kommando mehr Zeichen
-            // enthält, dann kann es kein Spielzug sein.
-            if (kommando.Length != 2)
+            if (!IstExaktZweiZeichenLang(kommando))
             {
                 return false;
             }
@@ -59,6 +56,22 @@ namespace TicTacToe
             }
 
             if (!IstZweitesZeichenZiffer(kommando))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Prüft ob das Kommando länger als 2 Zeichen ist.
+        /// Ein Spielzug besteht immer aus exakt 2 Zeichen. Wenn das Kommando mehr Zeichen
+        /// enthält, dann kann es kein Spielzug sein. Auch wenn es weniger enthält, kann es
+        /// kein Spielzug sein!
+        /// </summary>
+        private static bool IstExaktZweiZeichenLang(string kommando)
+        {
+            if (kommando.Length != 2)
             {
                 return false;
             }
