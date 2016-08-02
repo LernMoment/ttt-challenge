@@ -62,8 +62,10 @@ namespace TicTacToe
             // Ist das Kommando ein Spielzug, dann ist das zweite Zeichen eine Ziffer und 
             // identifiziert die Zeile der Koordinate. Ist das zweite Zeichen keine Ziffer,
             // kann das Kommando NICHT ein Spielzug sein.
-            string zeile = kommando.Substring(1, 1);
-            int.Parse(zeile); // Wird eine Exception schmeißen, wenn zeile nicht eine Ziffer ist!
+            if (!Char.IsDigit(kommando[1]))
+            {
+                return false;
+            }
 
             return true;
         }
