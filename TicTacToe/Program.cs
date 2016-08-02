@@ -53,12 +53,7 @@ namespace TicTacToe
                 return false;
             }
 
-            // 2) Prüfen ob das Kommando als erstes einen Buchstaben enthält.
-            // Ist das Kommando ein Spielzug, dann ist das erste Zeichen ein Buchstaben und 
-            // identifiziert die Spalte der Koordinate. Ist das erste Zeichen kein Buchstabe,
-            // kann das Kommando NICHT ein Spielzug sein.
-            string spalte = kommando.Substring(0, 1);
-            if (!Char.IsLetter(char.Parse(spalte)))
+            if (!IstErstesZeichenBuchstabe(kommando))
             {
                 return false;
             }
@@ -69,6 +64,22 @@ namespace TicTacToe
             // kann das Kommando NICHT ein Spielzug sein.
             string zeile = kommando.Substring(1, 1);
             int.Parse(zeile); // Wird eine Exception schmeißen, wenn zeile nicht eine Ziffer ist!
+
+            return true;
+        }
+
+        /// <summary>
+        /// Prüft ob das Kommando als erstes einen Buchstaben enthält.
+        /// Ist das Kommando ein Spielzug, dann ist das erste Zeichen ein Buchstaben und 
+        /// identifiziert die Spalte der Koordinate. Ist das erste Zeichen kein Buchstabe,
+        /// kann das Kommando NICHT ein Spielzug sein.
+        /// </summary>
+        private static bool IstErstesZeichenBuchstabe(string kommando)
+        {
+            if (!Char.IsLetter(kommando[0]))
+            {
+                return false;
+            }
 
             return true;
         }
