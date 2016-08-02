@@ -58,11 +58,7 @@ namespace TicTacToe
                 return false;
             }
 
-            // 3) Prüfen ob das Kommando an zweiter Stelle eine Ziffer enthält.
-            // Ist das Kommando ein Spielzug, dann ist das zweite Zeichen eine Ziffer und 
-            // identifiziert die Zeile der Koordinate. Ist das zweite Zeichen keine Ziffer,
-            // kann das Kommando NICHT ein Spielzug sein.
-            if (!Char.IsDigit(kommando[1]))
+            if (!IstZweitesZeichenZiffer(kommando))
             {
                 return false;
             }
@@ -79,6 +75,22 @@ namespace TicTacToe
         private static bool IstErstesZeichenBuchstabe(string kommando)
         {
             if (!Char.IsLetter(kommando[0]))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Prüft ob das Kommando an zweiter Stelle eine Ziffer enthält.
+        /// Ist das Kommando ein Spielzug, dann ist das zweite Zeichen eine Ziffer und 
+        /// identifiziert die Zeile der Koordinate. Ist das zweite Zeichen keine Ziffer,
+        /// kann das Kommando NICHT ein Spielzug sein.
+        /// </summary>
+        private static bool IstZweitesZeichenZiffer(string kommando)
+        {
+            if (!Char.IsDigit(kommando[1]))
             {
                 return false;
             }
